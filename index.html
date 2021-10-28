@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Load More</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="image">
+          <img src="1.jpg" alt="" />
+        </div>
+        <div class="text">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="btn">
+      <button>Load More</button>
+    </div>
+  </body>
+  <script>
+    const container = document.querySelector(".container");
+    const btn = document.querySelector(".btn");
+    const cards = document.querySelectorAll(".card");
+
+    const initialCount = Math.floor((container.clientWidth - 20) / 450);
+    let idx = 0;
+    for (let i = 0; i < initialCount; i++) {
+      cards[i].style.display = "block";
+      idx++;
+    }
+
+    btn.addEventListener("click", () => {
+      const showCount = Math.floor((container.clientWidth - 20) / 450);
+      for (let i = 0; i < showCount; i++) {
+        if (cards[idx]) {
+          cards[idx++].style.display = "block";
+        }
+      }
+      if (idx >= cards.length) {
+        btn.style.display = "none";
+      }
+    });
+  </script>
+</html>

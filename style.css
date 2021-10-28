@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  margin: 30px;
+  gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+}
+
+.card {
+  display: none;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  overflow: hidden;
+}
+
+.card .image {
+  margin-bottom: 10px;
+}
+
+.card .image img {
+  width: 100%;
+}
+
+.card .text {
+  padding: 0 15px;
+  margin-bottom: 10px;
+  line-height: 25px;
+  text-align: center;
+}
+
+.btn {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn button {
+  padding: 10px;
+  border: none;
+  background: #3498db;
+  color: white;
+  font-weight: 700;
+}
